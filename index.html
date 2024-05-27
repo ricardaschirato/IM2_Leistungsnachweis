@@ -1,3 +1,5 @@
+
+<!--
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,13 +7,78 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Your HTML code goes here -->
     <p>hallo</p>
     <h1>Hallo Rici</h1>
-    <h2>Mir chöme nid drus</h2>
+    <h2>Mir si ts beschte Team</h2>
 
     <script src="script.js" type="module"></script>
 
 </body>
 </html>
+-->
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SBB Zugverbindungen Spiel</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>SBB Zugverbindungen Spiel</h1>
+        <nav>
+            <ul>
+                <li><a href="#game">Spiel</a></li>
+                <li><a href="#team">Team</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="game">
+            <h2>Errate die Fahrzeit!</h2>
+            <div id="route">
+                <span id="from"></span> nach <span id="to"></span>
+            </div>
+            <input type="number" id="guess" placeholder="Fahrzeit in Minuten">
+            <button id="submit">Überprüfen</button>
+            <button id="new-destinations">Neue Destinationen</button>
+            <p id="result"></p>
+            <div id="score">Punkte: <span id="score-value">0</span></div>
+            <div id="animation" class="hidden">
+                <img src="images/train.gif" alt="Zug">
+            </div>
+            <a id="sbb-link" href="#" target="_blank" class="hidden">Verbindung auf SBB.ch anzeigen</a>
+        </section>
+        <section id="team">
+            <h2>Unser Team</h2>
+            <div class="team-member">
+                <img src="images/member1.jpg" alt="Mitglied 1">
+                <h3>Mitglied 1</h3>
+                <p>Beschreibung der Aufgaben von Mitglied 1 im Projekt.</p>
+            </div>
+            <div class="team-member">
+                <img src="images/member2.jpg" alt="Mitglied 2">
+                <h3>Mitglied 2</h3>
+                <p>Beschreibung der Aufgaben von Mitglied 2 im Projekt.</p>
+            </div>
+            <div class="team-member">
+                <img src="images/member3.jpg" alt="Mitglied 3">
+                <h3>Mitglied 3</h3>
+                <p>Beschreibung der Aufgaben von Mitglied 3 im Projekt.</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 SBB Spiel</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
 
