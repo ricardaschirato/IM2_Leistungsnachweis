@@ -1,22 +1,3 @@
-
-<!--
-<!DOCTYPE html>
-<html>
-<head>
-    <title>My HTML File</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <p>hallo</p>
-    <h1>Hallo Rici</h1>
-    <h2>Mir si ts beschte Team</h2>
-
-    <script src="script.js" type="module"></script>
-
-</body>
-</html>
--->
-
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -24,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SBB Zugverbindungen Spiel</title>
     <link rel="stylesheet" href="css/style.css">
+</head>
 <body>
     <header>
         <h1>SBB Zugverbindungen Spiel</h1>
@@ -41,31 +23,34 @@
                 <span id="from"></span> nach <span id="to"></span>
             </div>
             <input type="number" id="guess" placeholder="Fahrzeit in Minuten">
-            <button id="submit">Überprüfen</button>
+            <button id="submit" class="sbb-button">Überprüfen</button>
             <p id="result"></p>
             <div id="score">Punkte: <span id="score-value">0</span></div>
             <div id="animation" class="hidden">
-                <img src="images/train.gif" alt="Zug">
+                <img src="giphy.gif" alt="Zug">
             </div>
             <a id="sbb-link" href="#" target="_blank" class="hidden">Verbindung auf SBB.ch anzeigen</a>
             <canvas id="confetti-canvas" class="hidden"></canvas>
         </section>
         <section id="team">
-            <h2>Unser Team</h2>
+            <h2>Gründerinnen von TimeTrain</h2>
             <div class="team-member">
                 <img src="images/member1.jpg" alt="Mitglied 1">
-                <h3>Mitglied 1</h3>
-                <p>Beschreibung der Aufgaben von Mitglied 1 im Projekt.</p>
+                <h3>Corina Engel</h3>
+                <p class="role">Backend-Entwicklerin und API-Integration</p>
+                <p class="description">Wählt die API aus und integriert sie in die Webseite, verarbeitet die abgerufenen Daten, implementiert die dynamische Manipulation des DOM und schreibt strukturierten, effizienten JavaScript-Code.</p>
             </div>
             <div class="team-member">
-                <img src="images/member2.jpg" alt="Mitglied 2">
-                <h3>Mitglied 2</h3>
-                <p>Beschreibung der Aufgaben von Mitglied 2 im Projekt.</p>
+                <img src="TanjaJulmy.png" alt="Mitglied 2">
+                <h3>Tanja Julmy</h3>
+                <p class="role">Frontend-Entwicklerin und UX Designerin</p>
+                <p class="description">Die Webseitenstruktur mit HTML und CSS, implementiert responsive Design-Techniken, verbessert die Benutzerfreundlichkeit und visuelle Qualität der Webseite und fügt interaktive Elemente und Animationen hinzu.</p>
             </div>
             <div class="team-member">
-                <img src="images/member3.jpg" alt="Mitglied 3">
-                <h3>Mitglied 3</h3>
-                <p>Beschreibung der Aufgaben von Mitglied 3 im Projekt.</p>
+                <img src="RicardaSchirato.png" alt="Mitglied 3">
+                <h3>Ricarda Schirato</h3>
+                <p class="role">Projektmanagerin und Dokumentation</p>
+                <p class="description">Überwacht den Projektfortschritt, stellt die Einhaltung von Deadlines sicher, erstellt und pflegt die Projektdokumentation im Repository und bereitet die Teamvorstellung sowie die Projektergebnisse für die finale Präsentation vor.</p>
             </div>
         </section>
     </main>
@@ -76,12 +61,3 @@
     <script src="confetti.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-

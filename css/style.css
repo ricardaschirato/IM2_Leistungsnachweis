@@ -39,6 +39,9 @@ main {
   padding: 2em;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   display: inline-block;
+  width: 80%;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 #route {
@@ -73,13 +76,14 @@ footer {
   color: #fff;
   text-align: center;
   padding: 1em;
-  position: fixed;
+  position: static;
   width: 100%;
   bottom: 0;
 }
 
 #team {
   margin-top: 2em;
+  text-align: center;
 }
 
 .team-member {
@@ -88,16 +92,18 @@ footer {
   border-radius: 8px;
   padding: 1em;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  width: 200px;
+  width: 80%;
+  max-width: 400px;
   display: inline-block;
+  vertical-align: top;
   margin: 1em;
+  box-sizing: border-box;
 }
 
 .team-member img {
-  border-radius: 50%;
-  width: 100px;
-  height: 100px;
+  border-radius: 15%;
+  width: 150px;
+  height: 150px;
   object-fit: cover;
 }
 
@@ -105,8 +111,17 @@ footer {
   margin: 0.5em 0;
 }
 
-.team-member p {
+.team-member .role {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-top: 0.5em;
+  text-align: left;
+  color:red;
+}
+
+.team-member .description {
   font-size: 0.9em;
+  text-align: left;
 }
 
 #confetti-canvas {
@@ -117,4 +132,19 @@ footer {
   height: 100%;
   z-index: 1000;
   pointer-events: none;
+}
+
+.sbb-button {
+  background-color: #ff0000;
+  color: #fff;
+  border: none;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s;
+}
+
+.sbb-button:hover {
+  background-color: #cc0000;
 }
