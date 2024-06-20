@@ -3,37 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SBB Zugverbindungen Spiel</title>
+    <title>Timetrain</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
-        <h1>SBB Zugverbindungen Spiel</h1>
-        <nav>
-            <ul>
-                <li><a href="#game">Spiel</a></li>
-                <li><a href="#team">Team</a></li>
-            </ul>
-        </nav>
+        <h1>Timetrain</h1>
     </header>
     <main>
         <section id="game">
-            <h2>Errate die Fahrzeit!</h2>
-            <div id="route">
-                <span id="from"></span> nach <span id="to"></span>
+            <div class="sbb-query">
+                <div class="station-info">
+                    <div class="station">
+                        <label for="from">Von:</label>
+                        <span id="from"></span>
+                    </div>
+                    <div class="station">
+                        <label for="to">Nach:</label>
+                        <span id="to"></span>
+                    </div>
+                </div>
+                <div class="time-input">
+                    <label for="guess">Errate die Fahrzeit in Minuten:</label>
+                    <input type="number" id="guess" placeholder="Minuten">
+                </div>
             </div>
-            <input type="number" id="guess" placeholder="Fahrzeit in Minuten">
-            <button id="submit" class="sbb-button">Überprüfen</button>
+            <sbb-button-link id="submit" size="l" icon-name="arrow-right-small">
+                Überprüfen
+            </sbb-button-link>
             <p id="result"></p>
             <div id="score">Punkte: <span id="score-value">0</span></div>
             <div id="animation" class="hidden">
                 <img src="giphy.gif" alt="Zug">
             </div>
             <a id="sbb-link" href="#" target="_blank" class="hidden">Verbindung auf SBB.ch anzeigen</a>
-            <canvas id="confetti-canvas" class="hidden"></canvas>
+            <img id="confetti-gif" class="hidden" src="Confetti.gif" alt="Konfetti" />
         </section>
         <section id="team">
-            <h2>Gründerinnen von TimeTrain</h2>
+            <h2>Gründerinnen von Timetrain</h2>
             <div class="team-member">
                 <img src="images/member1.jpg" alt="Mitglied 1">
                 <h3>Corina Engel</h3>
@@ -44,7 +51,7 @@
                 <img src="TanjaJulmy.png" alt="Mitglied 2">
                 <h3>Tanja Julmy</h3>
                 <p class="role">Frontend-Entwicklerin und UX Designerin</p>
-                <p class="description">Die Webseitenstruktur mit HTML und CSS, implementiert responsive Design-Techniken, verbessert die Benutzerfreundlichkeit und visuelle Qualität der Webseite und fügt interaktive Elemente und Animationen hinzu.</p>
+                <p class="description">Erstellt die Webseitenstruktur mit HTML und CSS, implementiert responsive Design-Techniken, verbessert die Benutzerfreundlichkeit und visuelle Qualität der Webseite und fügt interaktive Elemente und Animationen hinzu.</p>
             </div>
             <div class="team-member">
                 <img src="RicardaSchirato.png" alt="Mitglied 3">
@@ -55,9 +62,8 @@
         </section>
     </main>
     <footer>
-        <p>&copy; 2024 SBB Spiel</p>
+        <p>&copy; 2024 Timetrain</p>
     </footer>
     <script src="script.js"></script>
-    <script src="confetti.js"></script>
 </body>
 </html>

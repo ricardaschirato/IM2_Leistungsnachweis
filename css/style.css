@@ -8,23 +8,8 @@ body {
 header {
   background-color: #ff0000;
   color: #fff;
-  padding: 1em;
+  padding: 3em;
   text-align: center;
-}
-
-nav ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-nav ul li {
-  display: inline;
-  margin: 0 1em;
-}
-
-nav ul li a {
-  color: #fff;
-  text-decoration: none;
 }
 
 main {
@@ -41,12 +26,56 @@ main {
   display: inline-block;
   width: 80%;
   max-width: 600px;
-  margin: 0 auto;
+  margin: -50px auto 0 auto;
+  position: relative;
+  z-index: 10;
 }
 
-#route {
-  font-size: 1.5em;
+.sbb-query {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 1em;
+  border-radius: 8px;
+  color: #333;
   margin-bottom: 1em;
+  font-size: 1.5em;
+}
+
+.station-info {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 1em;
+}
+
+.station {
+  margin-bottom: 0.5em;
+}
+
+.station label {
+  font-weight: bold;
+  margin-right: 0.5em;
+}
+
+.time-input {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.time-input label {
+  font-weight: bold;
+}
+
+#guess {
+  padding: 0.5em;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  margin-top: 0.5em;
+  font-size: 1.2em;
 }
 
 #result {
@@ -64,7 +93,7 @@ main {
 }
 
 #animation img {
-  width: 100px;
+  width: 200px;
 }
 
 .hidden {
@@ -116,7 +145,7 @@ footer {
   font-weight: bold;
   margin-top: 0.5em;
   text-align: left;
-  color:red;
+  color: red;
 }
 
 .team-member .description {
@@ -124,7 +153,42 @@ footer {
   text-align: left;
 }
 
-#confetti-canvas {
+#confetti-gif {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: auto;
+  z-index: 1000;
+  pointer-events: none;
+  display: none; /* Standardmäßig versteckt */
+}
+
+sbb-button-link {
+  background-color: #ff0000;
+  color: #fff;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  text-decoration: none;
+}
+
+sbb-button-link:hover {
+  background-color: #cc0000;
+}
+
+sbb-button-link::before {
+  content: '→';
+  margin-right: 0.5em;
+}
+
+#tsparticles {
   position: fixed;
   top: 0;
   left: 0;
@@ -132,19 +196,4 @@ footer {
   height: 100%;
   z-index: 1000;
   pointer-events: none;
-}
-
-.sbb-button {
-  background-color: #ff0000;
-  color: #fff;
-  border: none;
-  padding: 0.5em 1em;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 1em;
-  transition: background-color 0.3s;
-}
-
-.sbb-button:hover {
-  background-color: #cc0000;
 }
