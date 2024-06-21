@@ -12,28 +12,15 @@ document.addEventListener('DOMContentLoaded', () => {
     let correctDuration;
     let score = 0;
     const stations = [
-        "Zürich HB", "Bern", "Basel SBB", "Lausanne", "Genève", "Luzern", "Winterthur", "St. Gallen", "Lugano", "Biel/Bienne",
-        "Thun", "Schaffhausen", "Fribourg", "Chur", "Aarau", "Neuchâtel", "La Chaux-de-Fonds", "Olten", "Zug", "Uster",
-        "Yverdon-les-Bains", "Sion", "Rapperswil", "Bulle", "Bellinzona", "Wil", "Sierre/Siders", "Frauenfeld", "Kreuzlingen",
-        "Liestal", "Baden", "Langenthal", "Solothurn", "Davos Platz", "Vevey", "Montreux", "Zofingen", "Wetzikon", "Gossau",
-        "Einsiedeln", "Locarno", "Wettingen", "Payerne", "Burgdorf", "Brugg", "Dietikon", "Affoltern am Albis", "Glarus",
-        "Aigle", "St-Maurice", "Pfäffikon SZ", "Wattwil", "Flawil", "Wädenswil", "Martigny", "Herisau", "Morges", "Nyon",
-        "Arth-Goldau", "Sargans", "Altdorf", "Chiasso", "Muri", "Thalwil", "Rheinfelden", "Wallisellen", "Schwyz", "Samedan",
-        "Klosters Platz", "Walenstadt", "Landquart", "Poschiavo", "Brig", "Spiez", "Interlaken Ost", "Meilen", "Kilchberg",
-        "Oberrieden", "Horgen", "Männedorf", "Stäfa", "Rüti", "Hinwil", "Volketswil", "Dübendorf", "Kloten", "Bassersdorf",
-        "Bülach", "Opfikon", "Regensdorf", "Schlieren", "Richterswil", "Lachen", "Siebnen-Wangen", "Schindellegi-Feusisberg",
-        "Wollerau", "Wilen bei Wollerau", "Freienbach SOB", "Bäch", "Altendorf", "Tuggen", "Reichenburg", "Bilten",
-        "Ziegelbrücke", "Näfels-Mollis", "Nieder- und Oberurnen", "Ennenda", "Mitlödi", "Schwanden", "Nidfurn-Haslen",
-        "Leuggelbach", "Luchsingen-Hätzingen", "Diesbach-Betschwanden", "Rüti GL", "Linthal", "Brunnen", "Flüelen", "Sisikon",
-        "Erstfeld", "Amsteg-Silenen", "Gurtnellen", "Wassen", "Göschenen", "Airolo", "Faido", "Lavorgo", "Bodio", "Biasca",
-        "Osogna-Cresciano", "Lodrino", "Castione-Arbedo", "Giubiasco", "S. Antonino", "Cadenazzo", "Riazzino", "Gordola",
-        "Tenero", "Muralto", "Tegna", "Ponte Brolla", "Intragna", "Cavigliano", "Verscio", "Camedo", "Verdasio", "Corcapolo",
-        "Palagnedra", "Arcegno", "Brissago", "Porto Ronco", "Ascona", "Losone", "Lavertezzo", "Sonogno", "Bosco Gurin",
-        "Moghegno", "Cavergno", "Bignasco", "Cevio", "Maggia", "Minusio", "Quartino", "Contone", "Gerra Piano", "Vira Gambarogno",
-        "S. Nazzaro", "Piazzogna", "Dirinella", "Paradiso", "Melide", "Maroggia-Melano", "Capolago-Riva S. Vitale", "Mendrisio",
-        "Chiasso", "Balerna", "Stabio", "Gaggiolo", "Lamone-Cadempino", "Rivera-Bironico", "Mezzovico", "Taverne-Torricella",
-        "Lugano", "Lamone", "Cadempino", "Rivera", "Bironico", "Mezzovico", "Taverne", "Torricella"
-    ];
+            "Zürich HB", "Bern", "Basel SBB", "Lausanne", "Genève", "Luzern", "Winterthur", "St. Gallen", "Lugano", "Biel/Bienne",
+            "Thun", "Schaffhausen", "Fribourg", "Chur", "Aarau", "Neuchâtel", "La Chaux-de-Fonds", "Olten", "Zug", "Uster",
+            "Yverdon-les-Bains", "Sion", "Rapperswil", "Bulle", "Bellinzona", "Wil", "Sierre/Siders", "Frauenfeld", "Kreuzlingen",
+            "Liestal", "Baden", "Langenthal", "Solothurn", "Davos Platz", "Vevey", "Montreux", "Zofingen", "Wetzikon", "Gossau",
+            "Einsiedeln", "Locarno", "Wettingen", "Payerne", "Burgdorf", "Brugg", "Dietikon", "Affoltern am Albis", "Glarus",
+            "Aigle", "St-Maurice", "Pfäffikon SZ", "Wattwil", "Flawil", "Wädenswil", "Martigny", "Herisau", "Morges", "Nyon",
+            "Arth-Goldau", "Sargans", "Altdorf", "Chiasso", "Muri", "Thalwil", "Rheinfelden", "Wallisellen", "Schwyz", "Samedan",
+            "Klosters Platz", "Walenstadt", "Landquart", "Poschiavo"
+        ];
 
     let usedStations = [];
 
