@@ -8,9 +8,16 @@
 </head>
 <body>
     <header>
-        <h1>Timetrain</h1>
+        <img src="Logo.png" alt="Logo" id="logo">
+     <div class="topnav">
+        <Nav>
+            <a class="active" href="index.html"> Spiel </a>  
+            <a href="team.html"> Team </a>
+        </Nav>
+     </div>
     </header>
     <main>
+        
         <section id="game">
             <div class="sbb-query">
                 <div class="station-info">
@@ -18,6 +25,7 @@
                         <label for="from">Von:</label>
                         <span id="from"></span>
                     </div>
+                    <br>
                     <div class="station">
                         <label for="to">Nach:</label>
                         <span id="to"></span>
@@ -34,31 +42,10 @@
             <p id="result"></p>
             <div id="score">Punkte: <span id="score-value">0</span></div>
             <div id="animation" class="hidden">
-                <img src="giphy.gif" alt="Zug">
+                <img src="Zug.gif" alt="Zug">
             </div>
             <a id="sbb-link" href="#" target="_blank" class="hidden">Verbindung auf SBB.ch anzeigen</a>
             <img id="confetti-gif" class="hidden" src="Confetti.gif" alt="Konfetti" />
-        </section>
-        <section id="team">
-            <h2>Gründerinnen von Timetrain</h2>
-            <div class="team-member">
-                <img src="images/member1.jpg" alt="Mitglied 1">
-                <h3>Corina Engel</h3>
-                <p class="role">Backend-Entwicklerin und API-Integration</p>
-                <p class="description">Wählt die API aus und integriert sie in die Webseite, verarbeitet die abgerufenen Daten, implementiert die dynamische Manipulation des DOM und schreibt strukturierten, effizienten JavaScript-Code.</p>
-            </div>
-            <div class="team-member">
-                <img src="TanjaJulmy.png" alt="Mitglied 2">
-                <h3>Tanja Julmy</h3>
-                <p class="role">Frontend-Entwicklerin und UX Designerin</p>
-                <p class="description">Erstellt die Webseitenstruktur mit HTML und CSS, implementiert responsive Design-Techniken, verbessert die Benutzerfreundlichkeit und visuelle Qualität der Webseite und fügt interaktive Elemente und Animationen hinzu.</p>
-            </div>
-            <div class="team-member">
-                <img src="RicardaSchirato.png" alt="Mitglied 3">
-                <h3>Ricarda Schirato</h3>
-                <p class="role">Projektmanagerin und Dokumentation</p>
-                <p class="description">Überwacht den Projektfortschritt, stellt die Einhaltung von Deadlines sicher, erstellt und pflegt die Projektdokumentation im Repository und bereitet die Teamvorstellung sowie die Projektergebnisse für die finale Präsentation vor.</p>
-            </div>
         </section>
     </main>
     <footer>

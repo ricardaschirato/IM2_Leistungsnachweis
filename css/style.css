@@ -6,10 +6,39 @@ body {
 }
 
 header {
-  background-color: #ff0000;
+  background-color: #EB0000;
   color: #fff;
   padding: 3em;
   text-align: center;
+}
+
+header img {
+  width: 30%;
+  margin-bottom: 3%;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.topnav {
+  overflow: hidden;
+}
+
+.topnav a {
+  color: #f2f2f2;
+  text-align: center;
+  padding: 10%;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #A20013;
+  color: white;
 }
 
 main {
@@ -45,25 +74,26 @@ main {
 }
 
 .station-info {
-  display: flex;
-  justify-content: space-between;
   width: 100%;
   margin-bottom: 1em;
-}
-
-.station {
-  margin-bottom: 0.5em;
+  text-align: left;
+  padding: 0.5em;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  margin-top: 0.5em;
+  font-size: 1.2em;
 }
 
 .station label {
   font-weight: bold;
-  margin-right: 0.5em;
+  margin: 0.5em;
 }
 
 .time-input {
   display: flex;
   flex-direction: column;
   width: 100%;
+  text-align: left;
 }
 
 .time-input label {
@@ -115,6 +145,12 @@ footer {
   text-align: center;
 }
 
+.lead {
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+
 .team-member {
   background-color: #fff;
   border: 1px solid #ddd;
@@ -127,6 +163,7 @@ footer {
   vertical-align: top;
   margin: 1em;
   box-sizing: border-box;
+  height: 24em;
 }
 
 .team-member img {
@@ -138,14 +175,15 @@ footer {
 
 .team-member h3 {
   margin: 0.5em 0;
+  font-size: 2em;
 }
 
 .team-member .role {
-  font-size: 1.2em;
+  font-size: 1em;
   font-weight: bold;
   margin-top: 0.5em;
-  text-align: left;
-  color: red;
+  text-align: center;
+  color: black;
 }
 
 .team-member .description {
@@ -162,7 +200,6 @@ footer {
   height: auto;
   z-index: 1000;
   pointer-events: none;
-  display: none; /* Standardmäßig versteckt */
 }
 
 sbb-button-link {
