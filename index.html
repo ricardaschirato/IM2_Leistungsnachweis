@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Timetrain</title>
+    <title>Time Train</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -39,18 +39,21 @@
             <sbb-button-link id="submit" size="l" icon-name="arrow-right-small">
                 Überprüfen
             </sbb-button-link>
+            <sbb-button-link id="restart" class="hidden" size="l" icon-name="refresh">
+                Neues Spiel
+            </sbb-button-link>
             <p id="result"></p>
             <div id="score">Punkte: <span id="score-value">0</span></div>
             <div id="animation" class="hidden">
                 <img src="Zug.gif" alt="Zug">
             </div>
             <a id="sbb-link" href="#" target="_blank" class="hidden">Verbindung auf SBB.ch anzeigen</a>
-            <img id="confetti-gif" class="hidden" src="Confetti.gif" alt="Konfetti" />
         </section>
     </main>
     <footer>
-        <p>&copy; 2024 Timetrain</p>
+        <p>&copy; 2024 Time Train</p>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

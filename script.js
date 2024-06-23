@@ -7,8 +7,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const scoreValue = document.getElementById('score-value');
     const animation = document.getElementById('animation');
     const sbbLink = document.getElementById('sbb-link');
-    const confettiGif = document.getElementById('confetti-gif');
-
+    const restartButton = document.getElementById('restart');
+    
     let correctDuration;
     let score = 0;
     const stations = [
@@ -17,9 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "Yverdon-les-Bains", "Sion", "Rapperswil", "Bulle", "Bellinzona", "Wil", "Sierre/Siders", "Frauenfeld", "Kreuzlingen",
             "Liestal", "Baden", "Langenthal", "Solothurn", "Davos Platz", "Vevey", "Montreux", "Zofingen", "Wetzikon", "Gossau",
             "Einsiedeln", "Locarno", "Wettingen", "Payerne", "Burgdorf", "Brugg", "Dietikon", "Affoltern am Albis", "Glarus",
-            "Aigle", "St-Maurice", "Pfäffikon SZ", "Wattwil", "Flawil", "Wädenswil", "Martigny", "Herisau", "Morges", "Nyon",
-            "Arth-Goldau", "Sargans", "Altdorf", "Chiasso", "Muri", "Thalwil", "Rheinfelden", "Wallisellen", "Schwyz", "Samedan",
-            "Klosters Platz", "Walenstadt", "Landquart", "Poschiavo"
+            "Aigle", "St-Maurice"
         ];
 
     let usedStations = [];
@@ -86,8 +84,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Funktion zum Anzeigen des Konfetti-GIFs
-    function showConfettiGif() {
-        confettiGif.classList.remove('hidden');
+    function showConfetti() {
+        confetti({
+            particleCount: 100,
+            spread: 70,
+            origin: { y: 0.6 },
+        });
     }
 
     // Startet das Spiel und setzt eine neue Verbindung
@@ -104,32 +106,43 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Event-Listener für den Überprüfen-Button
     submitButton.addEventListener('click', async () => {
-        if (submitButton.textContent === 'Überprüfen') {
-            const userGuess = parseInt(guessInput.value);
-            if (isNaN(userGuess)) {
-                result.textContent = 'Bitte geben Sie eine gültige Zahl ein.';
-            } else {
-                if (checkGuess(userGuess, correctDuration)) {
-                    score++;
-                    scoreValue.textContent = score;
-                    result.textContent = `Richtig! Die Fahrzeit beträgt ${correctDuration} Minuten.`;
-                    animation.classList.remove('hidden');
-                    sbbLink.classList.remove('hidden');
-                    setTimeout(() => {
-                        animation.classList.add('hidden');
-                    }, 3000);
-                    if (score === 1) {
-                        showConfettiGif();
-                    }
-                } else {
-                    result.textContent = `Falsch. Die richtige Fahrzeit beträgt ${correctDuration} Minuten.`;
-                }
-                submitButton.textContent = 'Neue Verbindung';
-            }
-        } else {
+        if (submitButton.textContent != "Überprüfen") {
             await startGame();
+            return;
+        }
+
+        const userGuess = parseInt(guessInput.value);
+        if (isNaN(userGuess)) {
+            result.textContent = 'Bitte geben Sie eine gültige Zahl ein.';
+        } else {
+            if (checkGuess(userGuess, correctDuration)) {
+                score++;
+                scoreValue.textContent = score;
+                result.textContent = `Richtig! Die Fahrzeit beträgt ${correctDuration} Minuten.`;
+                animation.classList.remove('hidden');
+                sbbLink.classList.remove('hidden');
+                setTimeout(() => {
+                    animation.classList.add('hidden');
+                }, 6000);
+                if (score === 5) {
+                    showConfetti();
+                    restartButton.classList.remove('hidden');
+                    submitButton.classList.add('hidden');
+                }
+            } else {
+                result.textContent = `Falsch. Die richtige Fahrzeit beträgt ${correctDuration} Minuten.`;
+            }
+            submitButton.textContent = 'Neue Verbindung';
         }
     });
+
+    restartButton.addEventListener('click', () => {
+        score = 0;
+        scoreValue.textContent = score;
+        restartButton.classList.add('hidden');
+        submitButton.classList.remove('hidden');
+        startGame();
+    })
 
     // Startet das Spiel beim Laden der Seite
     startGame();
