@@ -57,5 +57,7 @@ Kontakte spielen lassen
 Da wir zu Beginn mehrere verschiedene Spielideen hatten, holten wir uns die Zweitmeinung eines Profis ein, um uns nicht etwas Unmögliches aufzubürden. Der Arbeitskollege von Corina ist Informatiker und hat unsere Ideen miteinander verglichen. Vor dem Hintergrund von Aufwand und Ertrag hat er uns schliesslich zur Umsetzung des Spieles geraten. Mit ihm konnte Corina gerade auch eine Skizze des logischen Aufbaus fertigen, wie wir dies Analog im Unterricht für die Cocktail Website getan haben. So konnten wir in unser Codier-Abenteuer starten. 
 Da uns der Konfetticode so viel Mühe bereitete und wir auch nach mehreren erfolglosen und frustrierenden Stunden immer noch nicht das gewünschte Resultat erhielten, holten wir uns nochmals Hilfe von einem Informatiker unseres Vertrauens. Er unterstützte uns bei der Einbindung des Konfetticodes in unserem Javascript.
 
-
+# Benutzte Links
+https://digital.sbb.ch/de/
+https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js
 
