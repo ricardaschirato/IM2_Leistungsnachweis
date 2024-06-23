@@ -21,24 +21,28 @@ header img {
 
 .topnav {
   overflow: hidden;
+  padding: 0.5em;
 }
 
 .topnav a {
   color: #f2f2f2;
   text-align: center;
-  padding: 10%;
+  margin: 5%;
   text-decoration: none;
   font-size: 1.5rem;
+  padding: 0.5em;
 }
 
 .topnav a:hover {
   background-color: #ddd;
   color: black;
+  padding: 0.5em;
 }
 
 .topnav a.active {
   background-color: #A20013;
   color: white;
+  padding: 0.5em;
 }
 
 main {
@@ -135,14 +139,18 @@ footer {
   color: #fff;
   text-align: center;
   padding: 1em;
-  position: static;
   width: 100%;
-  bottom: 0;
+  position:relative;
+  bottom: 0px;
 }
 
 #team {
   margin-top: 2em;
+  padding-top: 1em;
+  padding-bottom: 1em;
   text-align: center;
+  background-color: white;
+  width: 100%;
 }
 
 .lead {
@@ -152,7 +160,7 @@ footer {
 }
 
 .team-member {
-  background-color: #fff;
+  background-color: #E5E5E5;
   border: 1px solid #ddd;
   border-radius: 8px;
   padding: 1em;
@@ -167,7 +175,7 @@ footer {
 }
 
 .team-member img {
-  border-radius: 15%;
+  border-radius: 50%;
   width: 150px;
   height: 150px;
   object-fit: cover;
@@ -184,6 +192,7 @@ footer {
   margin-top: 0.5em;
   text-align: center;
   color: black;
+
 }
 
 .team-member .description {
@@ -233,4 +242,24 @@ sbb-button-link::before {
   height: 100%;
   z-index: 1000;
   pointer-events: none;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background-color:  #BDBDBD;
+  margin: 3% 0;
+  width: 90%;
+}
+
+.down {
+  transform:rotate(90deg)
+}
+
+.up{
+  transform:rotate(270deg)
+}
+
+h2{
+  margin: 1rem;
 }
